@@ -6,13 +6,14 @@ import actionTypes from '../../context/action/actionTypes'
 import { useSateValue } from '../../context/provider/StateProvider'
 
 const Login = () => {
-    const [state, dispatch] = useSateValue()
+    const [{ }, dispatch] = useSateValue()
     const signIn = async () => {
         try {
             const res = await auth.signInWithPopup(provider)
+            localStorage.setItem("user", JSON.stringify(res.user))
             dispatch({
                 type: actionTypes.SET_USER,
-                user: res.user
+                user: localStorage.getItem("user")
             })
         } catch (e) {
             console.log(e.message)

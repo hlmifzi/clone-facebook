@@ -1,9 +1,12 @@
 import React from 'react'
 import Icon from '../../assets/icon/Icon'
 import { Avatar, IconButton } from '@material-ui/core'
+import { useSateValue } from '../../context/provider/StateProvider'
 
 import './header.css'
 const Header = () => {
+    const [{ user }] = useSateValue()
+
     return (
         <div className="header">
             <div className="header__left">
@@ -33,11 +36,11 @@ const Header = () => {
                     <Icon.SupervisedUserCircleIcon fontSize="large" />
                 </div>
             </div>
-
+            {console.log(user)}
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar />
-                    <h4>Helmi Fauzi</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                 </div>
 
                 <IconButton>

@@ -7,12 +7,13 @@ import Login from './pages/auth/Login'
 import { useSateValue } from './context/provider/StateProvider'
 
 function App() {
-  const [{ user }, dispatch] = useSateValue()
+  const [{ user }] = useSateValue()
+  const isAuth = localStorage.getItem("user") ? true : user
 
   return (
     <div className="app">
       {
-        !user ?
+        !isAuth ?
           <Login /> :
           <>
             <Header />
