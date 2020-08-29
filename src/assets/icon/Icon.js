@@ -1,38 +1,54 @@
-import SearchIcon from '@material-ui/icons/Search';
-import HomeIcon from '@material-ui/icons/Home';
-import FlagIcon from '@material-ui/icons/Flag';
-import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
-import StorefrontIcon from '@material-ui/icons/Storefront';
-import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-import AddIcon from '@material-ui/icons/Add';
-import ForumIcon from '@material-ui/icons/Forum';
-import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
-import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags';
-import PeopleIcon from '@material-ui/icons/People';
-import ChatIcon from '@material-ui/icons/Chat';
-import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
-import { ExpandMoreOutlined } from '@material-ui/icons';
+import {
+    Search,
+    Home,
+    Flag,
+    Subscriptions,
+    Storefront,
+    SupervisedUserCircle,
+    Add,
+    Forum,
+    NotificationsActive,
+    ExpandMore,
+    LocalHospital,
+    EmojiFlags,
+    People,
+    Chat,
+    VideoLibrary,
+    ExpandMoreOutlined,
+    Videocam,
+    PhotoLibrary,
+    InsertEmoticon,
+    ThumbUp,
+    ChatBubbleOutline,
+    NearMe,
+    AccountCircle,
+} from '@material-ui/icons';
 
 
 const Icon = {
-    SearchIcon: SearchIcon,
-    HomeIcon: HomeIcon,
-    FlagIcon: FlagIcon,
-    SubscriptionsIcon: SubscriptionsIcon,
-    StorefrontIcon: StorefrontIcon,
-    SupervisedUserCircleIcon: SupervisedUserCircleIcon,
-    AddIcon: AddIcon,
-    ForumIcon: ForumIcon,
-    NotificationsActiveIcon: NotificationsActiveIcon,
-    ExpandMoreIcon: ExpandMoreIcon,
-    LocalHospitalIcon: LocalHospitalIcon,
-    EmojiFlagsIcon: EmojiFlagsIcon,
-    PeopleIcon: PeopleIcon,
-    ChatIcon: ChatIcon,
-    VideoLibraryIcon: VideoLibraryIcon,
-    ExpandMoreOutlined: ExpandMoreOutlined
+    SearchIcon: Search,
+    HomeIcon: Home,
+    FlagIcon: Flag,
+    SubscriptionsIcon: Subscriptions,
+    StorefrontIcon: Storefront,
+    SupervisedUserCircleIcon: SupervisedUserCircle,
+    AddIcon: Add,
+    ForumIcon: Forum,
+    NotificationsActiveIcon: NotificationsActive,
+    ExpandMoreIcon: ExpandMore,
+    LocalHospitalIcon: LocalHospital,
+    EmojiFlagsIcon: EmojiFlags,
+    PeopleIcon: People,
+    ChatIcon: Chat,
+    VideoLibraryIcon: VideoLibrary,
+    ExpandMoreOutlined: ExpandMoreOutlined,
+    Videocam: Videocam,
+    PhotoLibrary: PhotoLibrary,
+    InsertEmoticon: InsertEmoticon,
+    ThumbUp: ThumbUp,
+    ChatBubbleOutline: ChatBubbleOutline,
+    NearMe: NearMe,
+    AccountCircle: AccountCircle,
 }
 
 export default Icon
