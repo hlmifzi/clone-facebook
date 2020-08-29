@@ -1,5 +1,5 @@
 import React from 'react'
-import StoryReel from './StoryReel'
+import StoryReel from '../../components/story/StoryReel'
 
 const Feeds = () => {
     return (
