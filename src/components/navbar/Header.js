@@ -1,11 +1,11 @@
 import React from 'react'
 import Icon from '../../assets/icon/Icon'
 import { Avatar, IconButton } from '@material-ui/core'
-import { useSateValue } from '../../context/provider/StateProvider'
+import useAuth from '../../hooks/useAuth'
 
 import './header.css'
 const Header = () => {
-    const [{ user }] = useSateValue()
+    const { state } = useAuth()
 
     return (
         <div className="header">
@@ -36,11 +36,10 @@ const Header = () => {
                     <Icon.SupervisedUserCircleIcon fontSize="large" />
                 </div>
             </div>
-            {console.log(user)}
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar src={user.photoURL} />
-                    <h4>{user.displayName}</h4>
+                    <Avatar src={state.user.photoURL} />
+                    <h4>{state.user.displayName}</h4>
                 </div>
 
                 <IconButton>

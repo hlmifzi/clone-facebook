@@ -4,16 +4,15 @@ import Header from './components/navbar/Header'
 import Sidebar from './components/sidebar/Sidebar'
 import Feed from './pages/feed/Feed'
 import Login from './pages/auth/Login'
-import { useSateValue } from './context/provider/StateProvider'
+import useAuth from './hooks/useAuth'
 
 function App() {
-  const [{ user }] = useSateValue()
-  const isAuth = localStorage.getItem("user") ? true : user
+  const { state } = useAuth()
 
   return (
     <div className="app">
       {
-        !isAuth ?
+        !state.user ?
           <Login /> :
           <>
             <Header />

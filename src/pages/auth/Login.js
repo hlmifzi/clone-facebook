@@ -1,24 +1,11 @@
 import React from 'react'
 import './login.css'
-import Button from '@material-ui/core/Button';
-import { auth, provider } from '../../firebase'
-import actionTypes from '../../context/action/actionTypes'
-import { useSateValue } from '../../context/provider/StateProvider'
+import Button from '@material-ui/core/Button'
+import useAuth from '../../hooks/useAuth'
 
 const Login = () => {
-    const [{ }, dispatch] = useSateValue()
-    const signIn = async () => {
-        try {
-            const res = await auth.signInWithPopup(provider)
-            localStorage.setItem("user", JSON.stringify(res.user))
-            dispatch({
-                type: actionTypes.SET_USER,
-                user: localStorage.getItem("user")
-            })
-        } catch (e) {
-            console.log(e.message)
-        }
-    }
+    const { _handleSignIn } = useAuth()
+
     return (
         <div className="login">
             <div className="login__logo">
@@ -32,7 +19,7 @@ const Login = () => {
                 />
             </div>
 
-            <Button type="submit" onClick={signIn}>
+            <Button type="submit" onClick={_handleSignIn}>
                 Sign In
             </Button>
 

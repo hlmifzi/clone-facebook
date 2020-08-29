@@ -3,16 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { StateProvider } from './context/provider/StateProvider'
-import reducer, { initialState } from './context/reducer/reducer'
+import { AuthProvider } from "./context/AuthContext";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateProvider initialState={initialState} reducer={reducer}>
+    <AuthProvider >
       <App />
-    </StateProvider>
-  </React.StrictMode>,
+    </AuthProvider>
+  </React.StrictMode >,
   document.getElementById('root')
 );
 
