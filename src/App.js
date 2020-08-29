@@ -3,15 +3,25 @@ import './App.css';
 import Header from './components/navbar/Header'
 import Sidebar from './components/sidebar/Sidebar'
 import Feed from './pages/feed/Feed'
-import Widget from './components/widget/Widget'
+import Login from './pages/auth/Login'
+import { useSateValue } from './context/provider/StateProvider'
+
 function App() {
+  const [{ user }, dispatch] = useSateValue()
+
   return (
     <div className="app">
-      <Header />
-      <div className="app__body">
-        <Sidebar />
-        <Feed />
-      </div>
+      {
+        !user ?
+          <Login /> :
+          <>
+            <Header />
+            <div className="app__body">
+              <Sidebar />
+              <Feed />
+            </div>
+          </>
+      }
     </div>
   );
 }
