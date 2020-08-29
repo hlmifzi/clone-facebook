@@ -8,6 +8,13 @@ import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags';
+import PeopleIcon from '@material-ui/icons/People';
+import ChatIcon from '@material-ui/icons/Chat';
+import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
+import { ExpandMoreOutlined } from '@material-ui/icons';
+
 
 const Icon = {
     SearchIcon: SearchIcon,
@@ -20,6 +27,12 @@ const Icon = {
     ForumIcon: ForumIcon,
     NotificationsActiveIcon: NotificationsActiveIcon,
     ExpandMoreIcon: ExpandMoreIcon,
+    LocalHospitalIcon: LocalHospitalIcon,
+    EmojiFlagsIcon: EmojiFlagsIcon,
+    PeopleIcon: PeopleIcon,
+    ChatIcon: ChatIcon,
+    VideoLibraryIcon: VideoLibraryIcon,
+    ExpandMoreOutlined: ExpandMoreOutlined
 }
 
 export default Icon

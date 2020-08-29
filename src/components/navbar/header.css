@@ -10,7 +10,7 @@
 
  .header__left{
      display: flex;
-     /* justify-content: space-evenly; */
+     justify-content: space-evenly;
  }
 
  .header__input {
