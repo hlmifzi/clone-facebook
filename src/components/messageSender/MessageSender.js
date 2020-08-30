@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import { Avatar } from '@material-ui/core'
 import Icon from '../../assets/icon/Icon'
 import './message-sender.css'
+import useAuth from '../../hooks/useAuth'
 
 const MessageSender = () => {
     const [input, setInput] = useState("")
     const [imageUrl, setImageUrl] = useState("")
+
+    const { user } = useAuth().state
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -18,13 +21,13 @@ const MessageSender = () => {
     return (
         <div className="message-sender">
             <div className="message-sender__top">
-                <Avatar />
+                <Avatar src={user.photoURL} />
                 <form>
                     <input
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         className="message-sender__input"
-                        placeholder={`What's on your mind`}
+                        placeholder={`What's on your mind, ${user.displayName} ?`}
                     />
                     <input
                         value={imageUrl}

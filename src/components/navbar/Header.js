@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth'
 
 import './header.css'
 const Header = () => {
-    const { state } = useAuth()
+    const { user } = useAuth().state
 
     return (
         <div className="header">
@@ -38,8 +38,8 @@ const Header = () => {
             </div>
             <div className="header__right">
                 <div className="header__info">
-                    <Avatar src={state.user.photoURL} />
-                    <h4>{state.user.displayName}</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                 </div>
 
                 <IconButton>

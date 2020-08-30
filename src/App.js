@@ -20,12 +20,12 @@ const Apps = () => {
 }
 
 function App() {
-  const { state } = useAuth()
+  const { user } = useAuth().state
 
   return (
     <div className="app">
       {
-        !state.user ?
+        !user ?
           <Login /> :
           <>
             <Header />
