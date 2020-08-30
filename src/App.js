@@ -9,6 +9,29 @@ import useAuth from './hooks/useAuth'
 import { AuthProvider } from "./context/AuthContext";
 import './App.css';
 
+function App() {
+  const { user } = useAuth().state
+
+  return (
+    <div className="app">
+      {
+        !user ? (
+          <Login />
+        ) : (
+            <>
+              <Header />
+              <div className="app__body">
+                <Sidebar />
+                <Feed />
+              </div>
+            </>
+          )
+      }
+    </div>
+  );
+}
+
+
 const Apps = () => {
   return (
     <StateInspector name="facebook">
@@ -17,26 +40,6 @@ const Apps = () => {
       </AuthProvider>
     </StateInspector>
   )
-}
-
-function App() {
-  const { user } = useAuth().state
-
-  return (
-    <div className="app">
-      {
-        !user ?
-          <Login /> :
-          <>
-            <Header />
-            <div className="app__body">
-              <Sidebar />
-              <Feed />
-            </div>
-          </>
-      }
-    </div>
-  );
 }
 
 export default hot(Apps);
