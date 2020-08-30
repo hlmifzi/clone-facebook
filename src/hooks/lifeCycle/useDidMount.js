@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-function useDidMount(callback) {
+const useDidMount = (callback) => {
   React.useEffect(() => {
-    callback();
-  }, []);
+    callback()
+  }, [])
 }
 
-export default useDidMount;
+export default useDidMount

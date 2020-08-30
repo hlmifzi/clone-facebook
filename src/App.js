@@ -7,6 +7,7 @@ import Feed from './pages/feed/Feed'
 import Login from './pages/auth/Login'
 import useAuth from './hooks/useAuth'
 import { AuthProvider } from "./context/AuthContext";
+import { FeedProvider } from './pages/feed/provider/FeedContext'
 import './App.css';
 
 function App() {
@@ -22,7 +23,9 @@ function App() {
               <Header />
               <div className="app__body">
                 <Sidebar />
-                <Feed />
+                <FeedProvider>
+                  <Feed />
+                </FeedProvider>
               </div>
             </>
           )

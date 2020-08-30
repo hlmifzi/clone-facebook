@@ -13,7 +13,7 @@ import React from 'react';
     }
   }, [inputValue]);
  */
-function useDidUpdate(callback, deps) {
+const useDidUpdate = (callback, deps) => {
   const hasMount = React.useRef(false);
 
   React.useEffect(() => {
